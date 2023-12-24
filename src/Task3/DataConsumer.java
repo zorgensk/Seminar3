@@ -1,6 +1,6 @@
 package Task3;
 
 @FunctionalInterface
-public interface DataConsume<T> {
+public interface DataConsumer<T> {
     void consume(T data);
 }

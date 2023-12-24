@@ -1,2 +1,6 @@
-package Task3;public interface DataFilter {
+package Task3;
+
+@FunctionalInterface
+public interface DataFilter<T> {
+    boolean filter(T data);
 }

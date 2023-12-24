@@ -1,2 +1,7 @@
-package Task3;public interface DataTransformer {
+package Task3;
+
+@FunctionalInterface
+interface DataTransformer<T> {
+    T transform(T data);
 }
+

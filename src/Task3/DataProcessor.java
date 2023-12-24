@@ -7,9 +7,14 @@ public class DataProcessor<T> {
 
     public void addData(T data) {
         dataList.add(data);
-
     }
+
     public void process(DataFilter<T> filter, DataTransformer<T> transformer, DataConsumer<T> consumer) {
         for (T data : dataList) {
-            if (filter.filter(data)) 
+            if (filter.filter(data)) {
+                T transformedData = transformer.transform(data);
+                consumer.consume(transformedData);
+            }
+        }
+    }
 }

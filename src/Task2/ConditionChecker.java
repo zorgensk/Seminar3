@@ -1,2 +1,6 @@
-package Task2;public interface ConditionChecker {
+package Task2;
+@FunctionalInterface
+
+public interface ConditionChecker {
+    boolean check(int number);
 }
